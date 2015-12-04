@@ -1,0 +1,44 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="cglexample.css">
+<title>Conway's Game of Life Demo</title>
+<script src="cglexample.js"></script>
+</head>
+<body>
+<div style="display:inline-block;">
+<H1>Conway's Game of Life</H1>
+<p>
+<div class="canvasBorder"><canvas id="lifegrid" width="600" height="600">
+<table id="lifeTable">
+
+</table>
+</canvas></div>
+</div>
+</p>
+<form>
+<p>
+<input type="checkbox" id="wrap" value="true">
+<label for="wrap">Wrap cells</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="number" id="width" value="30" min="1" max="100" step="1" onchange="resetLife()">
+<label for="width">Width</label>
+<input type="number" id="height" value="30" min="1" max="100" step="1" onchange="resetLife()">
+<label for="height">Height</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" disabled="true" value="0" id="timestep" style="width:4em;">Timestep
+</p>
+<p>
+<input type="button" value="Play" id="play" onclick="runLife()">
+<input type="button" value="Pause" id="pause" disabled="true" onclick="pauseLife()">
+<input type="button" value="Step" id="step" onclick="stepLife()">
+<input type="button" value="Reset" id="reset" onclick="resetLife()">
+<input type="range" id="livepercentslider" min="0" max="100" step="1" value="30" onclick="updatePercentSlider()">
+<input type="text" id="livepercenttext" value="30" style="width:3em;" onchange="updatePercentText()">
+<label for="livepercentslider">% living cells</label>
+</p>
+</form>
+<script type="text/javascript">pageInit();</script>
+</body>
+
+
+</html>
