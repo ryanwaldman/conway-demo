@@ -1,0 +1,21 @@
+.canvasBorder{
+	border:30px groove;
+	display:inline-block;
+}
+h1{
+	text-align:center;
+}
+input[type="number"] {
+   width:5em;
+}
+table{
+	border:thick solid black;
+	border-collapse: collapse;
+}
+td{
+	border:thin solid black;
+	width:2em;
+	height:2em;
+	text-align:center;
+	vertical-align:middle;
+}
